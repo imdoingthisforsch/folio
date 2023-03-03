@@ -1,0 +1,82 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPd4ATWRyIK4EFW12aoglcC",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/imdoingthisforsch/folio/blob/main/guess%20a%20number\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Nv56Ds0yPcy3",
+        "outputId": "03578e2f-c4a2-4803-e216-c801acb877ba"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Guess a number between 1 and 100: 66\n",
+            "Too high!\n"
+          ]
+        }
+      ],
+      "source": [
+        "import random\n",
+        "\n",
+        "random_number = random.randint(1, 100)\n",
+        "\n",
+        "guess = 0\n",
+        "\n",
+        "num_guesses = 0\n",
+        "\n",
+        "while guess != random_number:\n",
+        "   \n",
+        "    guess = int(input(\"Guess a number between 1 and 100: \"))\n",
+        "    num_guesses += 1\n",
+        "\n",
+        "    if guess < random_number:\n",
+        "        print(\"Too low!\")\n",
+        "    elif guess > random_number:\n",
+        "        print(\"Too high!\")\n",
+        "    else:\n",
+        "        print(\"Congratulations, you guessed the number!\")\n",
+        "        print(\"Number of guesses:\", num_guesses)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "tY3BHR8XQdwj"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
